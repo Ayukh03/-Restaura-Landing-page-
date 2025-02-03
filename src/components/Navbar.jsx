@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import { FaBars } from "react-icons/fa6";
+import { MdOutlineMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 import logo from "../assets/logo.png";
 import { LINKS } from "../constants";
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
             })
         }
         setIsMobileMenuOpen(false);
-    }
+    }   
   return (
     <nav className="fixed top-4 z-50 flex w-full flex-col items-center
     justify-center">
@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>
             <div className="lg:hidden">
                 <button onClick={toggleMobileMenu}>
-                    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                    {isMobileMenuOpen ? <RxCross2 /> : <MdOutlineMenu />} 
                 </button>
             </div>
         </div>
